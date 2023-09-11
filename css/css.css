@@ -17,6 +17,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Manrope';
   src: url('../fonts/Manrope-Bold.woff2') format('woff2'),
@@ -28,9 +29,223 @@
 
 
 
+html {
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  line-height: 32px;
+  background-color: #fff;
+  color: var(--dark-purple);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* AUTOFILL-STYLES */
+/*input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-color: transparent;
+  -webkit-text-fill-color: inherit;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}*/
+
+
+/* PLACEHOLDER-STYLES */
+/*::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder {
+  color: rgba(52, 49, 61, 0.5);
+  opacity: 1;
+}*/
+
+
+/* VISUALLY-HIDDEN */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 1194px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* MAIN-CONTENT */
+.main-content {
+  flex-grow: 1;
+}
+/* LOGO */
+.logo {
+  display: block;
+  text-decoration: none;
+  transition: opacity ease var(--transition-duration);
+}
+.logo__img {
+  display: block;
+  width: 97px;
+  height: 26px;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+.logo:active {
+  opacity: 0.6;
+}
+
+
+/* SECONDARY LINK */
+.secondary {
+  display: inline-block;
+  border-bottom: 3px solid var(--eucalyptus-color);
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: -0.18px;
+  transition: color ease var(--transition-duration),
+              opacity ease var(--transition-duration);
+}
+
+.secondary:hover {
+  color: var(--eucalyptus-color);
+}
+
+
+/* UNDERLINED-TEXT */
+.underlined-text {
+  display: inline-block;
+  border-bottom: 3px solid var(--eucalyptus-color);
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 11px 24px 14px;
+  border: 2px solid transparent;
+  background-color: var(--eucalyptus-color);
+  color: var(--dark-purple);
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: border-color ease var(--transition-duration),
+   background-color ease var(--transition-duration),
+   color ease var(--transition-duration),
+   opacity ease var(--transition-duration);
+
+}
+.btn:hover {
+border-color: var(--eucalyptus-color);
+background-color: transparent;
+color: var(--eucalyptus-color);
+}
+.btn:active {
+  opacity: 0.6;
+}
+/* SITE-HEADER-HERO-WRAPPER */
+.site-hero-header-wrapper {
+  padding-top: 56px;
+  background-color: var(--dark-purple);
+}
+
+.site-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 55px;
+}
+
+.hero__heading {
+  max-width: 635px;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 36px;
+  font-family: var(--heading-font-family);
+  font-size: 80px;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+}
+
+.hero__btn {
+  margin-bottom: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 :root {
+  /* FONTS */
  --heading-font-family: "Fraunces9pt-SemiBold", "Times New Roman", serif;
  --body-font-family: "Manrope-Regular", "Arial", sans-serif;
+ --body-font-family: "Manrope-Bold", "Arial", sans-serif;
+
+ /* COLORS */
+ --dark-purple: #800080; /* Dark Purple */
+ --eucalyptus-color: #44A58D; /* Eucalyptus Green */
+
 /* TRANSITION */
 --transition-duration: 0.3s;
 }
