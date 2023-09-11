@@ -31,4 +31,6 @@
 :root {
  --heading-font-family: "Fraunces9pt-SemiBold", "Times New Roman", serif;
  --body-font-family: "Manrope-Regular", "Arial", sans-serif;
+/* TRANSITION */
+--transition-duration: 0.3s;
 }
